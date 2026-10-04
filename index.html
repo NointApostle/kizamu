@@ -3,13 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kotsu – goal tracker for Android</title>
-  <meta name="description" content="Kotsu is a free goal tracker for Android: daily, weekly, monthly and long-term goals, timers, streaks and badges. No account, and your data stays on your phone.">
-  <meta property="og:title" content="Kotsu – goal tracker for Android">
-  <meta property="og:description" content="Daily, weekly, monthly and long-term goals, timers, streaks and badges. Free, no account.">
+  <title>Kizamu – Free Habit &amp; Goal Tracker for Android, No Account</title>
+  <meta name="description" content="Kizamu is a free habit and goal tracker for Android. Daily, weekly, monthly and long-term goals, timers, streaks, XP and badges. Works offline, no account, and your data stays on your phone.">
+  <link rel="canonical" href="https://kizamu.nointdev.xyz/">
+  <meta name="theme-color" content="#6C5CE7">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://nointapostle.github.io/kotsu/">
-  <meta property="og:image" content="https://nointapostle.github.io/kotsu/icon.png">
+  <meta property="og:site_name" content="Kizamu">
+  <meta property="og:url" content="https://kizamu.nointdev.xyz/">
+  <meta property="og:title" content="Kizamu – Free Habit &amp; Goal Tracker for Android">
+  <meta property="og:description" content="Daily, weekly, monthly and long-term goals, timers, streaks and badges. Free, works offline, no account.">
+  <meta property="og:image" content="https://kizamu.nointdev.xyz/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kizamu, a habit and goal tracker for Android">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Kizamu",
+    "alternateName": ["刻む", "Kotsu"],
+    "description": "A free habit and goal tracker for Android with daily, weekly, monthly and long-term goals, timers, streaks, XP and badges. No account; data stays on the phone.",
+    "url": "https://kizamu.nointdev.xyz/",
+    "image": "https://kizamu.nointdev.xyz/og-image.png",
+    "operatingSystem": "Android 7.0 or newer",
+    "applicationCategory": "LifestyleApplication",
+    "downloadUrl": "https://github.com/NointApostle/kizamu/releases/latest/download/kizamu.apk",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "Daily, weekly, monthly and long-term goals",
+      "Amount targets, checklists and habits to avoid",
+      "Timers with pomodoro mode",
+      "Streaks, streak freezes, XP, levels and badges",
+      "Home screen widgets and app icon shortcuts",
+      "A weekly review",
+      "Goal templates and CSV export",
+      "Backups without an account"
+    ]
+  }
+  </script>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -118,6 +150,11 @@
     .steps span { color: var(--muted); font-size: 15px; }
     .note { color: var(--muted); font-size: 15px; }
 
+    .faq { display: grid; gap: 10px; max-width: 46em; }
+    .faq details { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; }
+    .faq summary { cursor: pointer; font-weight: 600; }
+    .faq p { margin: 8px 0 0; color: var(--muted); font-size: 16px; }
+
     .split { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .name-card .big { font-size: 44px; line-height: 1.1; margin: 0 0 8px; }
 
@@ -145,9 +182,9 @@
 <body>
   <header>
     <div class="wrap">
-      <a class="brand" href="#">
+      <a class="brand" href="./">
         <img src="icon.png" alt="" width="36" height="36">
-        Kotsu <span class="ja">コツ</span>
+        Kizamu <span class="ja">刻む</span>
       </a>
       <a class="header-link" href="#download">Download</a>
     </div>
@@ -158,16 +195,16 @@
       <div class="wrap">
         <div>
           <span class="tagline"><span class="ja">コツコツ</span> · little by little</span>
-          <h1>Track your goals, a little every day</h1>
-          <p class="lead">Set daily, weekly, monthly and long-term goals, time your practice, and keep your streak going. Free, no account, and everything stays on your phone.</p>
-          <a class="download" id="download-button" href="https://github.com/NointApostle/kotsu/releases/latest/download/kotsu.apk">
+          <h1>Build habits and track your goals, a little every day</h1>
+          <p class="lead">Kizamu is a habit tracker and goal tracker for Android. Set daily, weekly, monthly and long-term goals, time your practice, and keep your streak going. Free, works offline, no account, and everything stays on your phone.</p>
+          <a class="download" id="download-button" href="https://github.com/NointApostle/kizamu/releases/latest/download/kizamu.apk">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
             Download for Android
           </a>
           <div class="meta" id="release-meta">Free APK · Android 7.0 or newer</div>
         </div>
 
-        <div class="phone" role="img" aria-label="The Today screen in Kotsu, with four goals, two of them done">
+        <div class="phone" role="img" aria-label="The Today screen in Kizamu, with four goals, two of them done">
           <div class="phone-top">
             <span class="phone-title">Today</span>
             <span class="phone-date">Sat, Oct 3</span>
@@ -204,7 +241,7 @@
     <section id="features">
       <div class="wrap">
         <h2>What it does</h2>
-        <p class="section-lead">Kotsu keeps track of the small things you want to do regularly, and makes it a bit of a game.</p>
+        <p class="section-lead">Kizamu keeps track of the habits and small goals you want to keep up, and makes it a bit of a game.</p>
         <div class="features">
           <div class="feature">
             <h3>Daily, weekly, monthly and long-term goals</h3>
@@ -238,6 +275,14 @@
             <h3>Vacation mode and skipping</h3>
             <p>Pause everything until a date, pause one goal, or skip a goal for the day when you're sick. None of it counts against your streak.</p>
           </div>
+          <div class="feature">
+            <h3>A weekly review</h3>
+            <p>See how the week went next to the week before, which goals went well and which ones keep slipping. Get it as a notification every Sunday if you like.</p>
+          </div>
+          <div class="feature">
+            <h3>Templates, shortcuts and spreadsheets</h3>
+            <p>Start a goal from a ready-made one, check things off or start a timer by long-pressing the app icon, and export your history as a CSV file.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -245,13 +290,45 @@
     <section id="download">
       <div class="wrap">
         <h2>Install it</h2>
-        <p class="section-lead">Kotsu isn't on the Play Store yet, so you install it from the APK file.</p>
+        <p class="section-lead">Kizamu isn't on the Play Store yet, so you install it from the APK file.</p>
         <ol class="steps">
-          <li><b>Download the APK</b><span>Tap <a href="https://github.com/NointApostle/kotsu/releases/latest/download/kotsu.apk">Download for Android</a> on your phone.</span></li>
+          <li><b>Download the APK</b><span>Tap <a href="https://github.com/NointApostle/kizamu/releases/latest/download/kizamu.apk">Download for Android</a> on your phone.</span></li>
           <li><b>Open the file</b><span>Android asks once to allow installing apps from your browser or file manager. Allow it, then tap Install.</span></li>
-          <li><b>Open Kotsu</b><span>Add your first goal, and add a widget from your home screen if you like.</span></li>
+          <li><b>Open Kizamu</b><span>Add your first goal, and add a widget from your home screen if you like.</span></li>
         </ol>
-        <p class="note">To update, download the new version and install it over the old one. Your goals and progress stay. Older versions are on the <a href="https://github.com/NointApostle/kotsu/releases">releases page</a>.</p>
+        <p class="note">To update, download the new version and install it over the old one. Your goals and progress stay. Older versions are on the <a href="https://github.com/NointApostle/kizamu/releases">releases page</a>.</p>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is Kizamu free?</summary>
+            <p>Yes. There are no ads, no subscription and nothing to buy. The coins in the app are earned by checking off goals.</p>
+          </details>
+          <details>
+            <summary>Do I need an account or an internet connection?</summary>
+            <p>No. Kizamu works offline and has no account or server. Your goals and history are saved only on your phone.</p>
+          </details>
+          <details>
+            <summary>Is Kizamu on the Google Play Store?</summary>
+            <p>Not yet. You install it from the APK file on this page. Android asks once for permission to install apps from your browser or file manager.</p>
+          </details>
+          <details>
+            <summary>Can I move my goals to a new phone?</summary>
+            <p>Yes. Export a backup file from Settings, copy it to the new phone, and restore it there. Kizamu can also save a backup to a folder on your phone every day.</p>
+          </details>
+          <details>
+            <summary>Is there an iPhone version?</summary>
+            <p>No, Kizamu is only for Android for now.</p>
+          </details>
+          <details>
+            <summary>Wasn't this app called Kotsu?</summary>
+            <p>Yes. Kizamu was called Kotsu (コツ) until it was renamed, since other apps already used that name. It's the same app: install Kizamu over Kotsu and your goals and progress stay.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -259,11 +336,11 @@
       <div class="wrap split">
         <div class="card">
           <h3>Your data stays on your phone</h3>
-          <p>There's no account and no server. Your goals and history are saved on your phone, and you can export a backup file or have Kotsu save one to a folder every day.</p>
+          <p>There's no account and no server. Your goals and history are saved on your phone, and you can export a backup file or have Kizamu save one to a folder every day.</p>
         </div>
         <div class="card name-card">
-          <p class="big ja">コツコツ</p>
-          <p><b>Kotsu</b> (コツ) is Japanese for "the knack". <b>Kotsukotsu</b> means doing something steadily, little by little.</p>
+          <p class="big ja">刻む</p>
+          <p><b>Kizamu</b> (刻む) is Japanese for "to carve" or "to mark off", the way a clock marks time one tick at a time. Each check-off is one more notch. The tagline, <b>kotsukotsu</b> (コツコツ), is the sound of a chisel, and means doing something steadily, little by little.</p>
         </div>
       </div>
     </section>
@@ -271,18 +348,22 @@
 
   <footer>
     <div class="wrap">
-      <span>Kotsu <span class="ja">コツ</span></span>
-      <a href="https://github.com/NointApostle/kotsu/releases">All releases</a>
+      <span>Kizamu <span class="ja">刻む</span></span>
+      <nav style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <a href="#features">Features</a>
+        <a href="#faq">Questions</a>
+        <a href="https://github.com/NointApostle/kizamu/releases">All releases</a>
+      </nav>
     </div>
   </footer>
 
   <script>
     // Show the latest version and file size under the download button.
     // The page works without it.
-    fetch('https://api.github.com/repos/NointApostle/kotsu/releases/latest')
+    fetch('https://api.github.com/repos/NointApostle/kizamu/releases/latest')
       .then((response) => (response.ok ? response.json() : null))
       .then((release) => {
-        const apk = release && release.assets.find((asset) => asset.name === 'kotsu.apk');
+        const apk = release && release.assets.find((asset) => asset.name === 'kizamu.apk');
         if (!apk) return;
         const size = Math.round(apk.size / 1048576);
         document.getElementById('release-meta').textContent =
