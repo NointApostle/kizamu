@@ -96,7 +96,18 @@
     .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-weight: 700; font-size: 20px; }
     .brand img { width: 36px; height: 36px; border-radius: 9px; }
     .brand .ja { color: var(--muted); font-weight: 500; font-size: 16px; }
+    .header-links { display: flex; align-items: center; gap: 18px; }
     .header-link { font-weight: 600; text-decoration: none; }
+
+    /* Support buttons. Amber, so they stand out from the purple download button. */
+    .coffee { display: inline-flex; align-items: center; gap: 8px; background: var(--xp); color: #1E1E2E; text-decoration: none; font-weight: 700; border-radius: 999px; padding: 8px 16px; font-size: 15px; transition: transform 0.15s ease; }
+    .coffee:hover { transform: translateY(-1px); }
+    .coffee svg { width: 18px; height: 18px; flex: none; }
+    .coffee.big { font-size: 17px; padding: 14px 26px; border-radius: 14px; box-shadow: var(--shadow); }
+    .coffee.big svg { width: 20px; height: 20px; }
+    .support { display: flex; align-items: center; justify-content: space-between; gap: 24px; background: var(--card); border: 2px solid var(--xp); border-radius: 22px; padding: 28px 32px; }
+    .support h2 { margin-bottom: 6px; }
+    .support p { margin: 0; color: var(--muted); max-width: 36em; }
 
     /* Hero */
     .hero { padding: 40px 0 72px; }
@@ -165,6 +176,8 @@
       .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
       .steps { grid-template-columns: 1fr 1fr; }
       .split { grid-template-columns: 1fr; }
+      .support { flex-direction: column; align-items: stretch; padding: 24px 20px; }
+      .coffee.big { justify-content: center; }
     }
     @media (max-width: 560px) {
       body { font-size: 16px; }
@@ -172,10 +185,11 @@
       .features, .steps { grid-template-columns: 1fr; }
       section { padding: 44px 0; }
       .download { width: 100%; justify-content: center; }
+      .header-links .header-link { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      .download { transition: none; }
+      .download, .coffee { transition: none; }
     }
   </style>
 </head>
@@ -186,7 +200,10 @@
         <img src="icon.png" alt="" width="36" height="36">
         Kizamu <span class="ja">刻む</span>
       </a>
-      <a class="header-link" href="#download">Download</a>
+      <div class="header-links">
+        <a class="header-link" href="#download">Download</a>
+        <a class="coffee" href="https://buymeacoffee.com/noint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Zm12 1h1.5a2.5 2.5 0 0 1 0 5H16M8 3v2m4-2v2"/></svg>Support</a>
+      </div>
     </div>
   </header>
 
@@ -306,7 +323,7 @@
         <div class="faq">
           <details>
             <summary>Is Kizamu free?</summary>
-            <p>Yes. There are no ads, no subscription and nothing to buy. The coins in the app are earned by checking off goals. If you'd like to chip in anyway, you can <a href="https://buymeacoffee.com/noint">buy me a coffee</a>.</p>
+            <p>Yes. There are no ads, no subscription and nothing to buy. The coins in the app are earned by checking off goals. If you'd like to chip in anyway, you can <a href="#support">support the app</a> by buying me a coffee.</p>
           </details>
           <details>
             <summary>Do I need an account or an internet connection?</summary>
@@ -341,6 +358,18 @@
         <div class="card name-card">
           <p class="big ja">刻む</p>
           <p><b>Kizamu</b> (刻む) is Japanese for "to carve" or "to mark off", the way a clock marks time one tick at a time. Each check-off is one more notch. The tagline, <b>kotsukotsu</b> (コツコツ), is the sound of a chisel, and means doing something steadily, little by little.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="support">
+      <div class="wrap">
+        <div class="support">
+          <div>
+            <h2>Enjoying Kizamu?</h2>
+            <p>Kizamu is free, with no ads and no subscription, and it's made by one person. If it helps you keep your habits, you can support it by buying me a coffee.</p>
+          </div>
+          <a class="coffee big" href="https://buymeacoffee.com/noint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9Zm12 1h1.5a2.5 2.5 0 0 1 0 5H16M8 3v2m4-2v2"/></svg>Buy me a coffee</a>
         </div>
       </div>
     </section>
